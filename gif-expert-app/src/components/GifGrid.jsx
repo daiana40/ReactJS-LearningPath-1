@@ -2,6 +2,7 @@
 //import { getGifs } from "../helpers/getGifs";
 import { GifItem } from "./GifItem";
 import { useFetchGifs } from "../hooks/useFetchGifs";
+import PropTypes  from 'prop-types';
 
 export const GifGrid =( { category }) => {
     //llamo a la Api a traves de una funcion, esta arriba.
@@ -27,4 +28,8 @@ export const GifGrid =( { category }) => {
 
         </>
     )
+}
+
+GifGrid.prototype = {
+    category: PropTypes.string.isRequired,
 }
